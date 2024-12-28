@@ -1,273 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Pardhus portfolio</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-:root {
-  --primary-color: #a855f7;
-  --primary-color-dark: #9333ea;
-  --secondary-color: #ca8a04;
-  --text-dark: #1f2937;
-  --text-light: #6b7280;
-  --extra-light: #faf5ff;
-  --max-width: 1200px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  z-index: 99;
-}
-
-.nav__content {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav .logo a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  transition: 0.3s;
-}
-nav .logo a:hover {
-  color: var(--primary-color-dark);
-}
-
-nav .checkbox {
-  display: none;
-}
-
-nav input {
-  display: none;
-}
-nav .checkbox i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-  transition: left 0.3s;
-}
-
-ul li a {
-  padding: 0.5rem 1rem;
-  border: 2px solid transparent;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--text-dark);
-  transition: 0.3s;
-}
-
-ul li a:hover {
-  border-top-color: var(--secondary-color);
-  border-bottom-color: var(--secondary-color);
-  color: var(--secondary-color);
-}
-
-.section {
-  background-color: var(--extra-light);
-}
-
-.section__container {
-  min-height: 100vh;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.subtitle {
-  letter-spacing: 2px;
-  color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 3rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-}
-
-.title span {
-  font-weight: 600;
-}
-
-.description {
-  line-height: 1.5rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-}
-
-.action__btns {
-  display: flex;
-  gap: 1rem;
-}
-
-.action__btns button {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1rem 2rem;
-  outline: none;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.hire__me {
-  background-color: var(--primary-color);
-  color: #ffffff;
-}
-
-.hire__me:hover {
-  background-color: var(--primary-color-dark);
-}
-
-.portfolio {
-  color: var(--primary-color);
-}
-
-.portfolio:hover {
-  background-color: var(--primary-color-dark);
-  color: #ffffff;
-}
-
-.image {
-  display: grid;
-  place-items: center;
-}
-
-.image img {
-  width: min(25rem, 90%);
-  border-radius: 100%;
-}
-
-@media (width < 750px) {
-  nav .checkbox {
-    display: block;
-  }
-
-  ul {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 85px);
-    left: -100%;
-    top: 85px;
-    background-color: var(--extra-light);
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  nav #check:checked ~ ul {
-    left: 0;
-  }
-
-  ul li a {
-    font-size: 1.25rem;
-  }
-
-  .section__container {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .image {
-    grid-area: 1/1/2/2;
-  }
-
-  .action__btns {
-    margin: auto;
-  }
-}
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__content">
-        <div class="logo"><a href="#">PARDHU</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="My resume/about.html">About</a></li>
-          <li><a href="My resume/index.html">Resume</a></li>
-          
-          <li><a href="My resume/index1.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section class="section">
-      <div class="section__container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h1 class="title">
-            I'm <span>PARDHASARADHI MOLLI<br /></span>
-          </h1>
-          <p class="description">
-            Welcome to my web  portfolio! I'm Pardhasaradhi Molli , Aspiring Data Analyst 
-          </p>
-          <div class="action__btns">
-            
-            <button class="portfolio">Portfolio</button>
-          </div>
-        </div>
-        <div class="image">
-          <img src="IMG/WhatsApp Image 2024-02-08 at 9.13.34 AM.jpeg" alt="profile" />
-        </div>
-      </div>
-    </section>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+</head>
+<style>
+    body{
+        font-family: "Poppins", sans-serif;
+        background-color: #f3f35d
+    }
+    h1{
+        color: #a855f7;
+    }
+    h2{
+        color: #a855f7;
+    }
+</style>
+<body>
+    <h1>MOLLI PARDHASARADHI</h1>
+    <img src="my picture.jpeg" height="200" alt="pardhasaradhimolli">
+    <h2>Summary</h2>
+    <p>Enthusiastic and motivated graduate seeking an entry-level position in Supply Chain 
+        Management to utilize my academic knowledge, problem-solving skills and attention 
+        to detail in contributing to the detail in contributing to the efficient and streamlined 
+        operations of a reputable organization.</p><hr>
+    <h2>EDUCATIONAL DETAILS</h2>
+    <Ul><li>BACHELOR OF TECHNOLOGY,ELECTRONICS AND COMMUNICATION ENGINEERING - PRAGATI ENGINEERING COLLEGE ,SUREMPALEM(2020-2024)</li>
+    <li>INTERMEDIATE - MPS COLLEGE,MANDAPETA(2019-2020)</li>
+    <li>SSC - ANNAPURNA HIGH SCHOOL,MANDAPETA(2018)</li></Ul><hr>
+    <H2>SKILLS</H2>
+    <ul><li> PYTHON programming language</li>
+    <li>SQL,Advanced EXCEL</li>
+    <li>Working knowledge on MS office</li>
+    <li>PowerBi , Tableau </li>
+    <li><hr>
+    <h2>ACADEMIC ACHIEVEMENT AND CERTIFICATIONS</h2>
+    <ul><li>Participated in SMART INDIA HACKTHON 2022
+        </li>
+    <li>Participated in Poster Presentation on Fishing attack</li>
+    <li>Received the CONGNITIVE CLASS certification in Python 101 For Data Science</li>
+    <li>Received NPTEL certificate in Python for data science</li>
+<li>Received the CONGNITIVE CLASS certification in SQL</li></ul>
+<h2>INTERNSHIPS</h2>
+<ul><li>AWS cloud virtual internship</li>
+<li>AWS AI-ML virtual internship</li>
+<li>Process Mining Virtual Internship</li>
+<li>Accenture Nordic Developer Virtual internship</li>
+<li>Deloitte Australia Technology Virtual internship </li>
+<li>JPMorgan Chase & Co. Cybersecurity Virtual internship</li></ul><hr>
+<a href="index2.html"><h3>My bio data</h3></a>
+<a href="index1.html"><h3>Contact Me</h3></a>
+    
+</body>
 </html>
